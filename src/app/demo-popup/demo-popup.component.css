@@ -1,0 +1,17 @@
+.demo-pop {
+    position: absolute;
+    width: 50%;
+    border: 2px solid #ccc;
+    height: 60vh;
+    left: 25%;
+    background: #fff;
+    display: inherit;
+}
+
+.cross-btn {
+    background: red;
+    border-radius: 14px;
+    color: #fff;
+    float: right;
+    margin: 10px;
+}
