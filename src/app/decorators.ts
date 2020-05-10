@@ -6,12 +6,12 @@ export function UnsubscribeAndDisableBackground(constructor) {
   constructor.prototype.ngOnInit = function () {
     this._data.disableBackground.next(true);
 
-    onInit.apply(this);
+    onInit.apply(this, arguments);
   };
 
   constructor.prototype.ngOnDestroy = function () {
     this.subscriptions.forEach(sub => sub.unsubscribe());
 
-    onDestroy.apply(this);
+    onDestroy.apply(this, arguments);
   };
 }

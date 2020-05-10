@@ -26,7 +26,6 @@ export class DemoPopupComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this._data.testSubscripton2.subscribe((data) => {
       console.log('data', data);
     }));
-
   }
 
   hidePopup() {
