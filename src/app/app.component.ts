@@ -1,7 +1,6 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-// import { ISubscription } from 'rxjs/Subscription';
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { DataService } from './data.service';
-import { DemoPopupComponent } from './demo-popup/demo-popup.component';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +8,20 @@ import { DemoPopupComponent } from './demo-popup/demo-popup.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  @ViewChild('disableBackground') disableBackground: ElementRef;
-  title = 'class-decorators-angular';
+  title = 'Class Decorators Angular 9';
   disableBack = false;
   showPopup = false;
+  subscriptions: Array<Subscription> = [];
   constructor(private _data: DataService) {}
 
   ngOnInit() {
     this._data.disableBackground.subscribe((showHideBackground) => {
       this.disableBack = showHideBackground;
-      this.showPopup = showHideBackground;
     });
   }
 
-  enableDisableBack() {
-    this._data.disableBackground.next(!this.disableBack);
+  displayPopup() {
+    this.showPopup = true;
   }
 
   hidePopup() {

@@ -9,9 +9,10 @@
 }
 
 .cross-btn {
-    background: red;
-    border-radius: 14px;
+    background: cadetblue;
+    border-radius: 30px;
     color: #fff;
     float: right;
-    margin: 10px;
+    margin: 15px;
+    cursor: pointer;
 }

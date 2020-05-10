@@ -6,4 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataService {
   disableBackground = new BehaviorSubject(false);
+  testSubscripton1 = new BehaviorSubject(false);
+  testSubscripton2 = new BehaviorSubject('true');
+
 }

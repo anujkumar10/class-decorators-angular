@@ -1,9 +1,9 @@
 <div [class]="disableBack ? 'modal-backdrop' : '' ">
     <div style="text-align:center;height: 100vh;">
         <h1>
-            {{ title }}!
+            {{title}}
         </h1>
-        <button (click)="enableDisableBack()"> abc</button>
+        <button (click)="displayPopup()"> Show Popup</button>
         <app-demo-popup (closePopup)="hidePopup()" *ngIf="showPopup"> </app-demo-popup>
     </div>
 </div>
